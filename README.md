@@ -27,7 +27,22 @@ docker-compose.ymlを使用中の環境に合わせて書き換えてくださ�
 *GROUP_NAME=ローカルユーザのグループ名*  
 *UID=ローカルユーザのID*  
 *GID＝ローカルユーザのグループID*  
-*/home/aoki/ros2_humble_ws=ホストPCに用意したros 2ワークスペースの絶対パス*
+*/home/aoki/ros2_humble_ws=ホストPCに用意したros 2ワークスペースの絶対パス*  
+  
+USER情報は以下のコマンドで確認できます。
+```
+whoami
+```
+ユーザー名が出力されます。  
+`aoki`  
+  
+ユーザーid、グループ名、グループidを表示します。  
+```
+id aoki
+```
+出力  
+`uid=1000(aoki) gid=1000(aoki) groups=1000(aoki)`  
+uid=ユーザーid　gid=グループid　groups=所属しているグループ
 
 ## 5. 実行
 イメージを作成します。
