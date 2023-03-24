@@ -34,14 +34,13 @@ USER情報は以下のコマンドで確認できます。
 whoami
 ```
 ユーザー名が出力されます。  
-`aoki`  
+例： `aoki`  
   
-ユーザーid、グループ名、グループidを表示します。  
+ユーザーid、グループ名、グループidを出力します。  
 ```
 id aoki
 ```
-出力  
-`uid=1000(aoki) gid=1000(aoki) groups=1000(aoki)`  
+例： `uid=1000(aoki) gid=1000(aoki) groups=1000(aoki)`  
 uid=ユーザーid　gid=グループid　groups=所属しているグループ
 
 ## 5. 実行
