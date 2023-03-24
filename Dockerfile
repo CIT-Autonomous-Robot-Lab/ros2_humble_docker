@@ -29,6 +29,11 @@ RUN apt update \
 
 RUN bash /opt/ros/humble/setup.sh 
 
+# Install rosdep
+RUN apt-get -y update \
+  && apt-get -y upgrade \
+  && apt-get -y install python3-rosdep
+
 # Add user and group
 ARG UID
 ARG GID
