@@ -33,6 +33,14 @@ RUN bash /opt/ros/humble/setup.sh
 RUN apt-get -y update \
   && apt-get -y upgrade \
   && apt-get -y install python3-rosdep
+  
+# Install colcon
+RUN apt-get -y update \
+  && apt-get -y upgrade \
+  && sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list' \
+  && curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add - \
+  && apt -y update \
+  && apt -y install python3-colcon-common-extensions
 
 # Add user and group
 ARG UID
