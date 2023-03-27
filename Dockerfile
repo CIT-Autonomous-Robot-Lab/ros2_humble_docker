@@ -41,6 +41,11 @@ RUN apt-get -y update \
   && curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add - \
   && apt -y update \
   && apt -y install python3-colcon-common-extensions
+  
+# Install turtle-tf2
+RUN apt-get -y update \
+  && apt-get -y upgrade \
+  && sudo apt-get -y install ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations
 
 # Add user and group
 ARG UID
