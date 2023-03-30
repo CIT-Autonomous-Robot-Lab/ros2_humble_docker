@@ -16,5 +16,6 @@ services:
        - /tmp/.X11-unix:/tmp/.X11-unix
        - $HOME/.Xauthority/:/root/.Xauthority
        - /home/aoki/ros2_humble_ws:/ros2_ws
+       - /dev/dri:/dev/dri
     tty: true
     user: "${UID}:${GID}"
